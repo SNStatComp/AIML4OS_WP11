@@ -5,6 +5,11 @@ This file was taken from old initial repository https://github.com/skrzypczakp/w
 From 10 October 2025 all next changes will be made in target project repository https://github.com/SNStatComp/AIML4OS_WP11 
 
 
+
+---
+
+ARCHIVAL FILE : 
+
 ---
 
 
