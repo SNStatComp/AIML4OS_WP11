@@ -1,5 +1,13 @@
 
 
+This file was taken from old initial repository https://github.com/skrzypczakp/wp11initial/tree/master  for archive purposes only 
+
+From 10 October 2025 all next changes will be made in target project repository https://github.com/SNStatComp/AIML4OS_WP11 
+
+
+---
+
+
 IMPORTANT MESSAGE !!!
 
 
