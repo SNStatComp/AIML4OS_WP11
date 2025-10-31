@@ -1,15 +1,69 @@
 
+# 📅 Project Summary — 31.10.2025
 
-IMPORTANT MESSAGE !!!
+
+## Introduction of geographic data into the dataset: proposed procedure
 
 
-As of 10 October 2025, the latest version of the code has been moved to the target project repository.
 
-https://github.com/SNStatComp/AIML4OS_WP11 
 
-In that way  the entire WP11 team can access the code and collaborate.
+Using the original synthetic files available on the Onyxia portal:
 
-All next changes will be made in new repo only.
+
+Companies table: wp11_companies_synthetic_data.parquet  (Includes postal codes CP3, CP4 )
+
+Transactions table: wp11_b2b_synthetic_data.parquet (Includes postal codes CP7)
+
+Geo distances table : municipio_distances_v2.csv  (Includes  municipalities names ONLY ) 
+
+
+and an additional  file
+
+cod_post_freg_matched.csv from  :
+
+https://github.com/dssg-pt/mp-mapeamento-cp7  ( Includes postal codes CP7 AND municipalities names )
+
+repository of the external  Mini-Project: Mapping of Postal Codes to locations in Portugal, 
+
+
+we can add information on distances between companies for each row of the final synthetic merged dataset:
+
+LINE_DST – linear distance
+
+ROAD_DST – road distance
+
+Proposed procedure:
+
+Using the file cod_post_freg_matched.csv, it is possible to map CP7 postal codes (CodigoPostal) to municipality names (Concelho).
+
+In the AIML project, the companies table contains CP3 and CP4 codes. By combining them, we obtain the CP7 code.
+
+After merging the companies table with the file cod_post_freg_matched.csv, the companies table includes the municipality name (Concelho) for each company.
+
+Next, we merge the companies table with the transactions table from Onyxia (according to our pipeline). As a result, each transaction gets columns with the municipality names of the supplier and the buyer:
+
+sup_Concelho – supplier municipality
+
+buyer_Concelho – buyer municipality
+
+The next step is to join the data with the file municipio_distances_v2 (from Onyxia), which contains linear and road distances for each pair of municipalities labeled as MN_ORIGIN_DSG and MN_DESTINY_DSG.
+
+Assuming:
+
+Concelho_sup = MN_ORIGIN_DSG
+
+Concelho_buyer = MN_DESTINY_DSG
+
+
+we merge the data for the same combinations of Concelho_sup – Concelho_buyer and MN_ORIGIN_DSG – MN_DESTINY_DSG.
+
+As a result, we obtain 4,159,560 rows with geo distances. linear distance and road distance
+
+Now we are ready for next steps : 
+
+It will be possible to incorporate distances into the model and perform geo normalization.
+
+
 
 
 ---
