@@ -2,7 +2,7 @@
 # 📅 Project Summary — 31.10.2025
 
 
-## Introduction of geographic data into the dataset: proposed procedure
+## Introduction of geographic data into the synthetic dataset: proposed procedure
 
 
 
