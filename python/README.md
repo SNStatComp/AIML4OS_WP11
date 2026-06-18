@@ -6,7 +6,10 @@ Training pipeline
 
 Preliminary Recommendations for discussion feature engineering:
 
+
 Which exact variables to use as an input in the ML models?
+
+
 
 
 1. Must-Have Features (Core Drivers)
