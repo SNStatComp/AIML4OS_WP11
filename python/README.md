@@ -11,6 +11,9 @@ Which exact variables to use as an input in the ML models?
 
 
 
+<img width="774" height="940" alt="shap_summary_LightGBM" src="https://github.com/user-attachments/assets/07304063-4601-4716-a137-1a0f4c2f2b29" />
+
+
 
 1. Must-Have Features (Core Drivers)
    
