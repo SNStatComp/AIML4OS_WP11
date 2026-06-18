@@ -15,6 +15,11 @@ Which exact variables to use as an input in the ML models?
 
 
 
+<img width="791" height="940" alt="shap_bar_LightGBM" src="https://github.com/user-attachments/assets/3f1fb298-5ff0-4bbd-8632-29afec90cd80" />
+
+
+
+
 1. Must-Have Features (Core Drivers)
    
 Geography: same_region
