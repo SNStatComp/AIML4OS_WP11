@@ -18,7 +18,6 @@ LINKED – binary target variable indicating whether a supplier–buyer relation
 🟦 BASELINE (original feature engineering)
 
 
-diff_WAGES – absolute difference in labor costs between firms, capturing cost structure differences.
 
 diff_TO – absolute difference in turnover between firms, describing scale differences.
 
