@@ -111,8 +111,32 @@ The logarithmic transformation reduces the influence of extreme values, allows t
 
 ✅ Final outcome:
 
+Geography is the dominant factor
+ 
+The strongest predictor is same_region (NUTS3), indicating that firms located within the same region are significantly more likely to establish business links. This confirms the strong local nature of supply–demand networks and the continued importance of geographic proximity in reducing transaction and coordination costs.
 
-See files in folder shap 
+Supplier characteristics are the primary determinants
+   
+Supplier-side attributes are the most influential group of features. In particular, productivity (to_per_emp_sup), firm scale (log_NPE_sup, log_TO_sup), capital intensity (log_ACT_sup, act_per_emp_sup), and operational structure (wages_to_to_sup, purch_to_to_sup) are key drivers. This indicates that the formation of B2B links is primarily determined by the economic strength and efficiency of the supplier.
+
+Financial and operational structure matters significantly
+ 
+Suppliers with higher operational efficiency, stronger economic activity, and greater capital intensity are substantially more likely to participate in B2B relationships, highlighting the importance of organizational quality and economic capacity.
+
+Buyer-side effects are weaker
+   
+Buyer characteristics (e.g., log_TO_buyer, log_NPE_buyer, log_ACT_buyer) have a noticeably smaller impact. This suggests an asymmetric, supplier-driven market structure in which supply-side capabilities dominate demand-side characteristics.
+
+Firm similarity has limited explanatory power
+    
+Variables capturing sectoral similarity, size similarity, and structural differences (e.g., same_sector, same_DIM, diff_* features, ratios) contribute marginally to model performance, indicating that similarity between firms is not a key driver of link formation.
+
+
+
+For more : see files in folder shap 
+
+
+
 
 
 
