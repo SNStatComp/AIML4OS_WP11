@@ -19,11 +19,17 @@ LINKED – binary target variable indicating whether a supplier–buyer relation
 
 
 diff_WAGES – absolute difference in labor costs between firms, capturing cost structure differences.
+
 diff_TO – absolute difference in turnover between firms, describing scale differences.
+
 diff_NPE – difference in employment between firms, describing organizational size differences.
+
 same_sector – whether firms operate in the same NACE sector, measuring industry similarity.
+
 same_region – indicates whether two companies operate in the same administrative region (NUTS3), capturing geographic proximity effects.
+
 diff_WAGES – absolute difference in labor costs between firms, capturing cost structure differences.
+
 
 🟩 NEW (extended feature engineering)
 
@@ -32,41 +38,66 @@ The extended feature set introduces additional firm-level economic indicators, c
 Supplier-Side Features
 
 to_per_emp_sup – turnover per employee, measuring supplier productivity.
+
 wages_to_to_sup – ratio of labor costs to turnover, describing cost structure intensity.
+
 log_NPE_sup – logarithm of employment, capturing firm scale.
+
 purch_to_to_sup – ratio of purchases to turnover, indicating input intensity.
+
 log_TO_sup – logarithm of turnover, representing market size.
+
 log_ACT_sup – logarithm of total assets, capturing capital base.
+
 act_per_emp_sup – assets per employee, measuring capital intensity.
+
 log_PURCH_sup – logarithm of purchases, indicating procurement scale.
+
 
 Buyer-Side Features
 
 purch_to_to_buyer – ratio of purchases to turnover, measuring demand intensity.
+
 to_per_emp_buyer – turnover per employee, capturing productivity.
+
 wages_to_to_buyer – labor cost share in turnover, describing cost structure.
+
 act_per_emp_buyer – assets per employee, measuring capital intensity.
+
 log_TO_buyer – logarithm of turnover, representing firm scale.
+
 log_ACT_buyer – logarithm of assets, describing capital base.
+
 log_PURCH_buyer – logarithm of purchases, indicating input demand.
+
 log_NPE_buyer – logarithm of employment, representing organizational size.
+
 
 Pairwise Relational Features
 
 These features explicitly model asymmetries and economic relationships between supplier and buyer firms:
 
 economic_similarity – absolute difference in log turnover, representing overall economic dissimilarity.
+
 NPE_ratio – ratio of supplier to buyer employment, capturing relative organizational scale.
+
 trade_potential – interaction term between supplier turnover (log) and buyer purchases (log), approximating potential trade intensity.
+
 TO_ratio – ratio of supplier to buyer turnover, measuring market dominance asymmetry.
+
 ACT_ratio – ratio of supplier to buyer assets, capturing capital strength asymmetry.
+
 supplier_larger_TO – binary indicator of whether the supplier has higher turnover than the buyer.
+
 supplier_larger_ACT – binary indicator of whether the supplier has higher assets than the buyer.
+
 supplier_larger_NPE – binary indicator of whether the supplier has higher employment than the buyer.
+
 
  Structural Similarity Features
    
 same_DIM – indicator of whether firms belong to the same size class (DIM), capturing similarity in organizational scale.
+
 same_sector – indicator of whether firms operate within the same NACE sector, capturing industry-level similarity.
 
 
@@ -74,6 +105,8 @@ same_sector – indicator of whether firms operate within the same NACE sector, 
 ## 🎯 Purpose of the Changes
 
 ➡️ This extension of the WP11 feature engineering framework enhances firm-level representations by adding productivity, scale, capital intensity, and relational asymmetry measures, while its initial integration into the modeling pipeline enables preliminary SHAP-based evaluation and supports iterative feature refinement.
+
+The logarithmic transformation reduces the influence of extreme values, allows the model to capture the diminishing marginal effect of distance and firm size, and better reflects relative economic differences between business partners than raw values.
 
 
 ✅ Final outcome:
@@ -89,9 +122,11 @@ Actual flow of the pipeline
 main_sampling > parameter > data_sampling > training_all_models_one > validation 
 
 
+
 to execute pipeline with new features
 
 main_sampling > parameter > data_sampling > training_all_models_one_new_features > validation 
+
 
 
 to execute shape analysis 
