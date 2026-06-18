@@ -13,16 +13,23 @@ Supplier strength: log_TO_sup, log_NPE_sup, log_ACT_sup, to_per_emp_sup, act_per
 Rationale: These variables represent the strongest predictors of B2B link formation, capturing geographic proximity and the economic strength, productivity, and operational capacity of suppliers.
 
 2. Nice-to-Have Features (Supporting Drivers)
+   
 Buyer characteristics: log_TO_buyer, log_NPE_buyer, log_ACT_buyer, to_per_emp_buyer, purch_to_to_buyer
+
 Interaction features: economic_similarity, trade_potential, TO_ratio, ACT_ratio, NPE_ratio
+
 Asymmetry indicators: supplier_larger_TO, supplier_larger_ACT, supplier_larger_NPE
 
 Rationale: These variables provide additional demand-side and firm-matching information, improving model robustness, although their contribution is secondary compared to supplier-related features.
 
 3. Low-Value / Candidate Features for Removal
+ 
 Structural similarity: same_sector, same_DIM
+
 Difference-based features: diff_TO, diff_NPE, diff_WAGES
+
 Redundant ratios: TO_ratio, ACT_ratio, NPE_ratio
+
 
 Rationale: These features exhibit limited predictive power (low SHAP importance) and are largely redundant with log-transformed supplier and buyer characteristics.
 
