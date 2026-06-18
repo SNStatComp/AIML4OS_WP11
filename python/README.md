@@ -11,7 +11,7 @@
 
 Target variable
 
-LINKED – binary target variable indicating whether a supplier–buyer relationship exists (cleaned, converted to numeric and clipped to [0,1]).
+LINKED – binary target variable indicating whether a supplier–buyer relationship exists ([0,1]).
 
 
 
