@@ -1,4 +1,56 @@
 
+# 📅 Project Summary — 18.06.2026
+
+Training pipeline 
+
+Topics for discussion on feature engineering: Which exact variables to use as an input in the ML models?
+
+
+1. Must-Have Features (Core Drivers)
+Geography: same_region
+Supplier strength: log_TO_sup, log_NPE_sup, log_ACT_sup, to_per_emp_sup, act_per_emp_sup, wages_to_to_sup, purch_to_to_sup
+
+Rationale: These variables represent the strongest predictors of B2B link formation, capturing geographic proximity and the economic strength, productivity, and operational capacity of suppliers.
+
+2. Nice-to-Have Features (Supporting Drivers)
+Buyer characteristics: log_TO_buyer, log_NPE_buyer, log_ACT_buyer, to_per_emp_buyer, purch_to_to_buyer
+Interaction features: economic_similarity, trade_potential, TO_ratio, ACT_ratio, NPE_ratio
+Asymmetry indicators: supplier_larger_TO, supplier_larger_ACT, supplier_larger_NPE
+
+Rationale: These variables provide additional demand-side and firm-matching information, improving model robustness, although their contribution is secondary compared to supplier-related features.
+
+3. Low-Value / Candidate Features for Removal
+Structural similarity: same_sector, same_DIM
+Difference-based features: diff_TO, diff_NPE, diff_WAGES
+Redundant ratios: TO_ratio, ACT_ratio, NPE_ratio
+
+Rationale: These features exhibit limited predictive power (low SHAP importance) and are largely redundant with log-transformed supplier and buyer characteristics.
+
+4. Recommended Production Model (WP11)
+
+Core feature set:
+
+same_region
+log_TO_sup
+log_NPE_sup
+log_ACT_sup
+to_per_emp_sup
+act_per_emp_sup
+wages_to_to_sup
+purch_to_to_sup
+
+Optional extension:
+
+log_TO_buyer
+log_NPE_buyer
+purch_to_to_buyer
+trade_potential
+economic_similarity
+
+Key takeaway: The model is primarily supplier-driven and location-driven, while firm similarity contributes only marginally to predictive performance.
+
+
+
 
 # 📅 Project Summary — 18.06.2026
 
