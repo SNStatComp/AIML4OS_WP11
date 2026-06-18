@@ -3,7 +3,10 @@
 
 Training pipeline 
 
-Topics for discussion on feature engineering: Which exact variables to use as an input in the ML models?
+
+Preliminary Recommendations for discussion feature engineering:
+
+Which exact variables to use as an input in the ML models?
 
 
 1. Must-Have Features (Core Drivers)
