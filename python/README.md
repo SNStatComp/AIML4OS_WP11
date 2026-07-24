@@ -5,7 +5,7 @@
 ## 🔄 Recent Changes
 
 
-- **Addesd file**:  validation.py
+- **Added file**:  validation.py
 
 
 
@@ -29,7 +29,7 @@ Implementation AUPR  into validation module, in accordance with the reviewer's r
 ## 🔄 Recent Changes
 
 
-- **Addesd file**:  training_all_models_one_new_features_geo_nacepair.py
+- **Added file**:  training_all_models_one_new_features_geo_nacepair.py
 
 
 
@@ -65,7 +65,7 @@ and then type python main_sampling.py
 ## 🔄 Recent Changes
 
 
-- **Addesd file**:  training_all_models_one_new_features_geo.py
+- **Added file**:  training_all_models_one_new_features_geo.py
 
 
 
