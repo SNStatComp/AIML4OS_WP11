@@ -1,4 +1,25 @@
 
+# 📅 Project Summary — 24.07.2026 - part 5 (final)
+
+
+## 🔄 Recent Changes
+
+
+- **Udated file**:  parameter.py , training_all_models_one
+
+
+
+## 🎯 Purpose of the Changes
+
+
+Preparation python files for second visit in Portugal 
+
+Files will be sent by email for security check in 24.07.2026
+
+
+
+
+
 # 📅 Project Summary — 24.07.2026 - part 4 
 
 
