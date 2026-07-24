@@ -23,17 +23,17 @@ PARAMS = {
     # models
     # -------------------------------
     "models_to_train": [
-        "K-Nearest Neighbors",
-        "Naive Bayes",
-        "Decision Tree",
-        "Extra Trees",
-        "Logistic Regression",
-        "MLP Classifier",
-        "Quadratic Discriminant Analysis",
+        #"K-Nearest Neighbors",
+        #"Naive Bayes",
+        #"Decision Tree",
+        #"Extra Trees",
+        #"Logistic Regression",
+        #"MLP Classifier",
+        #"Quadratic Discriminant Analysis",
         "Histogram-Based Gradient Boosting",
         "XGBoost Classifier",
         "LightGBM",
-        "AdaBoost",
+        #"AdaBoost",
         "Random Forest"
     ],
 
