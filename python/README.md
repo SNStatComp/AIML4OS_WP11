@@ -16,17 +16,6 @@ Implementation AUPR  into validation module, in accordance with the reviewer's r
 
 
   
-## ▶️ How to Run the Code 
-
-
-To execute code type :
-
-
-change file name training_all_models_one_new_features_geo_nacepair.py into training_all_models_one
-
-
-and then type python main_sampling.py
-
 
 
 
