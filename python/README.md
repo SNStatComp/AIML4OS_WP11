@@ -1,4 +1,40 @@
 
+# 📅 Project Summary — 24.07.2026 - part 3 
+
+
+## 🔄 Recent Changes
+
+
+- **Addesd file**:  training_all_models_one_new_features_geo_nacepair.py
+
+
+
+## 🎯 Purpose of the Changes
+
+
+Introducing NACE PAIR analysis features into trianing module 
+
+
+  
+
+## ▶️ How to Run the Code 
+
+
+To execute code type :
+
+
+change file name training_all_models_one_new_features_geo_nacepair.py into training_all_models_one
+
+
+and then type python main_sampling.py
+
+
+
+
+
+
+
+
 # 📅 Project Summary — 24.07.2026 - part 2 
 
 
