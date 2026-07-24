@@ -1,4 +1,39 @@
 
+# 📅 Project Summary — 24.07.2026 - part 4 
+
+
+## 🔄 Recent Changes
+
+
+- **Addesd file**:  validation.py
+
+
+
+## 🎯 Purpose of the Changes
+
+
+Implementation AUPR  into validation module, in accordance with the reviewer's recommendations
+
+
+  
+## ▶️ How to Run the Code 
+
+
+To execute code type :
+
+
+change file name training_all_models_one_new_features_geo_nacepair.py into training_all_models_one
+
+
+and then type python main_sampling.py
+
+
+
+
+
+
+
+
 # 📅 Project Summary — 24.07.2026 - part 3 
 
 
