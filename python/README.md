@@ -1,4 +1,42 @@
 
+# 📅 Project Summary — 24.07.2026
+
+
+## 🔄 Recent Changes
+
+
+- **Udated file**:  data_sampling.py
+
+
+
+## 🎯 Purpose of the Changes
+
+
+  Based on geo data taken from file municipio_distances_v2.csv from onyxia training data was extended with new column for each transaction row
+  allowing to introduce some geo features into the project 
+
+example :
+  
+MN_ORIGIN_DSG	MN_DESTINY_DSG	LINE_DST	ROAD_DST
+
+Lisboa	Benavente	33237.76	54601.4
+
+
+  
+
+## ▶️ How to Run the Code 
+
+
+To execute code type :
+
+python main_sampling.py
+
+
+
+
+
+
+
 # 📅 Project Summary — 18.06.2026
 
 Training pipeline 
