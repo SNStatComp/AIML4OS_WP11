@@ -314,6 +314,92 @@ else:
 
 
 
+
+
+
+
+
+
+
+### End of new changes  24.07.2026
+
+
+
+import pandas as pd
+
+# Load the municipality data file 'municipio_distances_v2.csv'
+# The file must be located in the main project directory.
+
+municipio_df = pd.read_csv('municipio_distances_v2.csv')
+
+print("File 'municipio_distances_v2.csv' has been loaded into the DataFrame 'municipio_df'.")
+print(municipio_df.head())
+
+
+municipio_df['MN_ORIGIN'] = municipio_df['MN_ORIGIN'].astype(str).str.zfill(4)
+municipio_df['MN_DESTINY'] = municipio_df['MN_DESTINY'].astype(str).str.zfill(4)
+
+print(municipio_df.head())
+
+
+b2b_merged['MN_ORIGIN'] = b2b_merged['DDCCFF_sup'].astype(str).str[:4]
+b2b_merged['MN_DESTINY'] = b2b_merged['DDCCFF_buyer'].astype(str).str[:4]
+
+print(b2b_merged[['DDCCFF_sup', 'MN_ORIGIN', 'DDCCFF_buyer', 'MN_DESTINY']].head())
+
+
+# Merge DataFrames
+
+df_merged_muni = b2b_merged.merge(
+    municipio_df,
+    left_on=['MN_ORIGIN', 'MN_DESTINY'],
+    right_on=['MN_ORIGIN', 'MN_DESTINY'],
+    how='left'
+)
+
+print("The DataFrames 'b2b_merged' and 'municipio_df' have been successfully merged into 'df_merged_muni'.")
+print("The following summary shows the number of non-null values for each column in the merged DataFrame:")
+df_merged_muni.info()
+
+
+# Count rows after the merge
+
+print(f"Number of rows in b2b_merged (before merge): {len(b2b_merged)}")
+print(f"Number of rows in municipio_df (before merge): {len(municipio_df)}")
+print(f"Number of rows in df_merged_muni (after merge): {len(df_merged_muni)}")
+
+
+# Check NaN and zero values after the merge
+
+nan_values = df_merged_muni['ROAD_DST'].isnull().sum()
+zero_values = (df_merged_muni['ROAD_DST'] == 0).sum()
+
+print(f"Number of NaN values in column 'ROAD_DST': {nan_values}")
+print(f"Number of zero values in column 'ROAD_DST': {zero_values}")
+
+
+nan_values = df_merged_muni['LINE_DST'].isnull().sum()
+zero_values = (df_merged_muni['LINE_DST'] == 0).sum()
+
+print(f"Number of NaN values in column 'LINE_DST': {nan_values}")
+print(f"Number of zero values in column 'LINE_DST': {zero_values}")
+
+
+# Do not remove the Azores and Madeira
+
+
+# Replace the DataFrame for the subsequent pipeline steps
+
+b2b_merged = df_merged_muni
+
+
+### End of new changes – 24.07.2026
+
+
+
+
+
+
 import pandas as pd
 
 def load_data():
