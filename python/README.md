@@ -12,7 +12,12 @@
 ## 🎯 Purpose of the Changes
 
 
-  Based on geo data taken from file municipio_distances_v2.csv from onyxia training data was extended with new column for each transaction row
+  Based on geo data taken from file municipio_distances_v2.csv from onyxia 
+  
+  
+  training data was extended with new column for each transaction row
+
+  
   allowing to introduce some geo features into the project 
 
 example :
